@@ -20,8 +20,7 @@ namespace ComparativeClustering
         public double[][] rawData;// = new double[][];
         public double[] _initialCentroid = new double[2];
         //public System.Diagnostics.Stopwatch watch;
-        public double _counts = 1;
-       
+
 
         Stopwatch watch = new Stopwatch();
         Random rndNext = new Random();
@@ -34,7 +33,7 @@ namespace ComparativeClustering
         public Form1()
         {
             InitializeComponent();
-          //  btnCluster.Enabled = false;
+            //  btnCluster.Enabled = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -204,13 +203,13 @@ namespace ComparativeClustering
                     else
                     {
                         valueNotCorrect += txtIndexA.Text == "" ? "Index A is empty\n\n" : "";
-                        
+
 
                         valueNotCorrect += $"{txtIndexA.Text} Please make sure Index A is a valid index.\n\n";
                     }
                     if (int.TryParse(txtIndexB.Text, out _indxB))
                     {
-                        
+
                         valueNotCorrect += Convert.ToInt32(txtIndexB.Text) > rawData.Length - 1 ? "Specified Index B is out of range" : "";
                     }
                     else
@@ -221,43 +220,30 @@ namespace ComparativeClustering
 
                     if (valueNotCorrect == "")
                     {
-                        
+
                         _initialCentroid[0] = Convert.ToInt32(txtIndexA.Text);
                         _initialCentroid[1] = Convert.ToInt32(txtIndexB.Text);
                     }
                 }
-                
+
                 else
                 {
-                    _initialCentroid[0] = rndNext.Next(1, (rawData.Length % 2 + rawData.Length - 1));//rawData[rndNext.Next(1, rawData.Length)][0];
+                    _initialCentroid[0] = rndNext.Next(1, (rawData.Length - 1));//rawData[rndNext.Next(1, rawData.Length)][0];
                     _initialCentroid[1] = rndNext.Next(1, rawData.Length - 1);//rawData[rndNext.Next(1, rawData.Length)][0];
-                    if(_initialCentroid[0] == _initialCentroid[1])
-                    {
-                        _initialCentroid[1] = rndNext.Next(1, rawData.Length % Convert.ToInt32(_initialCentroid[0]) + 3);
-                    }
                 }
                 if (valueNotCorrect == "")
                 {
                     //Calculate Clusters Randomly
                     var mean = GetMean(rawData);
                     var weight = Weight(rawData, mean);
-                    lblCentroidIndex.Text = $"Index A: {_initialCentroid[0] + 1}  Index B:{_initialCentroid[1] + 1}";
-             
 
                     watch = System.Diagnostics.Stopwatch.StartNew();
-                    Thread.Sleep(500);
+                    //Thread.Sleep(500);
                     int _numberOfRandomIterations = CalculateRandom(rawData, _initialCentroid, weight);
                     watch.Stop();
                     //double elapsedTime1 = (watch.Elapsed.Ticks / 100d);
                     //double tt = Convert.ToDouble(watch.Elapsed.Milliseconds);
-                    //if (_counts != 1)
-                    //{
-                    //    _counts = ((watch.Elapsed.TotalMilliseconds + 1) * (300));
-                    //}
-                    //else
-                    //{
-                    //    _counts = watch.Elapsed.TotalMilliseconds;
-                    //}
+
                     var _noOfIterationsRandom = $"No. of iterations: {_numberOfRandomIterations} ";
                     //var _timeRandomTook = $"Execution Time: {watch.ElapsedMilliseconds} ms";
                     var _timeRandomTook = $"Execution Time: {watch.Elapsed.TotalMilliseconds} ms";
@@ -266,19 +252,11 @@ namespace ComparativeClustering
 
                     //Calculation using Dissimilarity Degree
                     watch = System.Diagnostics.Stopwatch.StartNew();
-                    Thread.Sleep(500);
+                    //Thread.Sleep(500);
                     int _numberOfDissimilarityDegreeIteration = CalculateDissimilarityDegree(rawData, _initialCentroid);
 
                     watch.Stop();
                     double elapsedTime = (watch.Elapsed.Ticks / 10000d);
-                    //if(_counts != 1)
-                    //{
-                    //    _counts = ((watch.Elapsed.TotalMilliseconds + 1) * (300));
-                    //}
-                    //else
-                    //{
-                    //    _counts = watch.Elapsed.TotalMilliseconds;
-                    //}
                     var _noOfIterationsDissimilarity = $"No. of iterations: {_numberOfDissimilarityDegreeIteration} ";
                     var _timeTakenDissimilarity = $"Execution Time: {watch.Elapsed.TotalMilliseconds} ms";
                     //var _timeTakenDissimilarity = $"Execution Time: {watch.Elapsed.Ticks/10000} ms";
@@ -294,9 +272,8 @@ namespace ComparativeClustering
                     MessageBox.Show(valueNotCorrect);
                 }
             }
-            
             btnCluster.Enabled = true;
-            _counts += 1;
+
         }
 
         private int CalculateRandom(double[][] _sampleData, double[] _initCentroid, double[] _weight)
@@ -314,13 +291,11 @@ namespace ComparativeClustering
             _centroids[0] = new double[] { _sampleData[Convert.ToInt32(_initCentroid[0])][0], _sampleData[Convert.ToInt32(_initCentroid[0])][1] };
             _centroids[1] = new double[] { _sampleData[Convert.ToInt32(_initCentroid[1])][0], _sampleData[Convert.ToInt32(_initCentroid[1])][1] };
             lblCentroid.Text = $"Centroids ({_centroids[0][0]} , {_centroids[0][1]}) and ({_centroids[1][0]} , {_centroids[1][1]})";
-            
-            
             //_centroids[0] = new double[] { _sampleData[0][0], _sampleData[0][1] };
             //_centroids[1] = new double[] { _sampleData[3][0], _sampleData[3][1] };
             //The 2nd to last and last one had 4 iterations
 
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < _sampleData.Count() - 1; j++)
             {
                 for (int i = 0; i < _sampleData.Count() - 1; i++)
                 {
@@ -336,12 +311,12 @@ namespace ComparativeClustering
                 {
                     _filtered = _compareList.Any(ci => ci.SequenceEqual(firstSet));
                 }
-                
-                
+
+
                 _compareList.Add(firstSet);
-                
-                
-                
+
+
+
                 //if (_comparer.Count > 0)
                 //{
                 //    foreach (var key in _comparer)
@@ -360,13 +335,13 @@ namespace ComparativeClustering
                 _centroids = GetNewCentroid(firstSet, _sampleData);
                 firstSet = new List<double>();
             }
-            if(_iterations == 3)
+            if (_iterations == 3)
             {
 
             }
             return _iterations + 1;
         }
-      
+
         private int CalculateDissimilarityDegree(double[][] _sampleData, double[] _initCentroid)
         {
             double[][] _centroids = new double[2][];
@@ -382,7 +357,7 @@ namespace ComparativeClustering
             _centroids[1] = new double[] { _sampleData[Convert.ToInt32(_initCentroid[1])][0], _sampleData[Convert.ToInt32(_initCentroid[1])][1] };
             //_centroids[0] = new double[] { _sampleData[0][0], _sampleData[0][1] };
             //_centroids[1] = new double[] { _sampleData[3][0], _sampleData[3][1] };
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < _sampleData.Count() - 1; j++)
             {
                 var _maxValue1 = (MaxValue(_centroids) - 1);
                 for (int i = 0; i < _sampleData.Count() - 1; i++)
@@ -462,7 +437,7 @@ namespace ComparativeClustering
             }
             foreach (var num in _newCentroid)
             {
-                if(num == 0)
+                if (num == 0)
                 {
                     sum3 += _sampleData[tracker][0];
                     sum4 += _sampleData[tracker][1];
