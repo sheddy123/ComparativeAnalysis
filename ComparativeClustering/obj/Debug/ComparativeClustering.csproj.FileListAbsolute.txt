@@ -1,0 +1,26 @@
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.exe.config
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.exe
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.pdb
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.csprojAssemblyReference.cache
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.Form1.resources
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.Properties.Resources.resources
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.csproj.GenerateResource.cache
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.exe
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.pdb
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.exe.manifest
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.application
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.exe.manifest
+C:\Users\iodom\Documents\Visual Studio 2019\Projects\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.application
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.exe.config
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.exe.manifest
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.application
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.exe
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\bin\Debug\ComparativeClustering.pdb
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.csprojAssemblyReference.cache
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.Form1.resources
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.Properties.Resources.resources
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.csproj.GenerateResource.cache
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.exe.manifest
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.application
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.exe
+C:\Users\iodom\Documents\ifeanyi\ComparativeClustering\ComparativeClustering\obj\Debug\ComparativeClustering.pdb
