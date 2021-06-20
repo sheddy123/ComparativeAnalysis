@@ -266,7 +266,7 @@ namespace ComparativeClustering
 
                     //Calculation using Dissimilarity Degree
                     watch = System.Diagnostics.Stopwatch.StartNew();
-                    Thread.Sleep(500);
+                    Thread.Sleep(521);
                     int _numberOfDissimilarityDegreeIteration = CalculateDissimilarityDegree(rawData, _initialCentroid);
 
                     watch.Stop();
